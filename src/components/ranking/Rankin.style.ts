@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const UserContainer = styled.div`
   gap: 15px;
-  width: 80%;
+  width: 100%;
   height: 50px;
   padding: 12px;
   border-radius: 16px;
@@ -11,13 +11,25 @@ export const UserContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+
+  p {
+    color: ${({ theme }) => theme.colors.primaryColor};
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8px;
+  }
 `;
 
 export const RankScore = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70%;
+  /* height: 70%; */
+  width: 8%;
   aspect-ratio: 1 / 1;
 
   border-radius: 50%;
@@ -32,22 +44,24 @@ export const RankScore = styled.div`
 export const CardCountCotainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 140%;
+
   background-color: ${({ theme }) => theme.colors.white};
   border-width: 2px;
   border-style: none;
   border-color: ${({ theme }) => theme.colors.gray2};
+
+  border-radius: 80px;
+
+  img {
+    width: 20px;
+  }
 `;
 
-export const GreenText = styled.p`
-  color: ${({ theme }) => theme.colors.primaryColor};
-  font-family: Pretendard;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.8px;
-`;
-export const Text = styled.p`
+export const Text = styled.pre`
   color: ${({ theme }) => theme.colors.gray4};
   font-family: Pretendard;
   font-size: 20px;
@@ -55,4 +69,5 @@ export const Text = styled.p`
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.8px;
+  margin: 0;
 `;

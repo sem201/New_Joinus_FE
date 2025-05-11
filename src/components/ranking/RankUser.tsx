@@ -1,19 +1,20 @@
 import * as S from "./Rankin.style";
-// import card from "../../assets/image/card.png";
+import card from "@assets/image/card.png";
+import left from "@assets/icons/chevron-right.svg";
 
 const RankUser = () => {
   return (
     <S.UserContainer>
       <S.RankScore>
-        <S.GreenText>1</S.GreenText>
+        <p>1</p>
       </S.RankScore>
-      <S.GreenText>조인어스조인어스</S.GreenText>
+      <p>조인어스조인어스</p>
       <S.CardCountCotainer>
-        {/* <img src={card} alt="카드 이미지" /> */}
+        <img src={card} alt="카드 이미지" />
         <S.Text>:</S.Text>
-        <S.GreenText>93</S.GreenText>
+        <p>93</p>
       </S.CardCountCotainer>
-      <S.GreenText>{">"}</S.GreenText>
+      <img src={left} alt="피드 보러가기" />
     </S.UserContainer>
   );
 };
